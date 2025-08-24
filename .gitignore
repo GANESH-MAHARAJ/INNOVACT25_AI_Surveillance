@@ -1,0 +1,13 @@
+api/node_modules
+clips/
+
+cv-worker/__pycache__
+cv-worker/detectors/__pycache__
+cv-worker/features/__pycache__
+cv-worker/tracking/__pycache__
+cv-worker/utils/__pycache__
+cv-worker/venv
+
+media-writer/venv
+
+web-ui/node_modules

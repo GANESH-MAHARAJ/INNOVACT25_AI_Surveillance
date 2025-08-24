@@ -1,0 +1,36 @@
+cameras:
+  - id: "cam01"
+    source: 0
+    fps_cap: 15
+  - id: "cam02"
+    source: 1
+    fps_cap: 15
+
+yolo:
+  weights: "yolov8n.pt"
+  conf: 0.35
+  iou: 0.45
+  classes: ["person","backpack","handbag","suitcase"]
+
+overlay:
+  show_labels: true
+  show_ids: true
+  show_zones: true
+
+tamper:
+  warmup_frames: 60
+  persist_frames: 15
+  cooldown_seconds: 10
+  blur_drop_ratio: 0.15
+  abs_blur_floor: 8.0
+  freeze_seconds: 60
+  hist_flat_thr: 0.990
+
+zones:
+  - name: "Lobby_A"
+    type: "general"
+    polygon: [[60,60],[580,60],[580,420],[60,420]]
+    loiter_seconds: 8
+  - name: "Restricted_Door"
+    type: "restricted"
+    polygon: [[460,220],[620,220],[620,420],[460,420]]
